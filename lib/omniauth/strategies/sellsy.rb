@@ -1,8 +1,8 @@
+require "omniauth/strategies/oauth"
+
 module OmniAuth
   module Strategies
     class Sellsy < OmniAuth::Strategies::OAuth
-      option :name, :sellsy
-
       args [:consumer_key, :consumer_secret]
 
       option :client_options, {
@@ -36,6 +36,16 @@ module OmniAuth
           }
         }
       end
+
+      uid { raw_info['peopleid'] }
+
+      extra do
+        {
+          raw_info: raw_info
+        }
+      end
+
+      private
 
       def raw_info
         @raw_info ||= JSON.parse(access_token.post(options['client_options']['raw_info_url'], { 'do_in' => {
