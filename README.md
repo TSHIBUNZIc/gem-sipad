@@ -1,32 +1,36 @@
-# omniauth-xeno
+# omniauth-sellsy
 
-This is the OmniAuth strategy for authenticating to [Xeno](https://xenoapp.com)
+This is the OmniAuth strategy for authenticating to [Sellsy](https://sellsy.com) (Using OAuth1)
 
 ## Installation
 
-1. Create a Xeno account on https://xeno.app
+1. Create a Sellsy account on https://sellsy.com
 
-2. Sign into to your Xeno account and create an Application using [this link](https://xeno.app/applications). Provide a URL like https://mywebsite.com/auth/xeno/callback as the callback. Copy the Client ID and Client Secret after creating the Application
+2. To get access to the API and has to start develop your application, you must go into your account preferences Sellsy. You will find a category 'Developers'.
 
-3. Add `omniauth-xeno` to your Gemfile
+3. On this page you can manage your applications: creation, modification, and management of tokens access level (public / private).
+
+4. You just have to create a new application. You will get your tokens and can start your development.
+
+5. Add `omniauth-sellsy` to your Gemfile
 
    ```
-   gem 'omniauth-xeno'
+   gem 'omniauth-sellsy'
    ```
 
-4. Provide your Client ID and Client Secret to your gem in an initializer
+6. Provide your Client ID and Client Secret to your gem in an initializer
 
    ```ruby
    # In config/initializers/omniauth.rb
 
    use OmniAuth::Builder do
-     provider :xeno, ENV['client_id'], ENV['client_secret']
+     provider :sellsy, ENV['consumer_token'], ENV['consumer_secret']
    end
    ```
 
 ## Credits
 
-This gem was authored by [Xeno](https://xenoapp.com/).
+This gem was authored by [Rémi Delhaye](https://xenoapp.com/).
 
 ## License
 

@@ -1,14 +1,14 @@
-require File.expand_path('../lib/omniauth-xeno/version', __FILE__)
+require File.expand_path('../lib/omniauth-sellsy/version', __FILE__)
 
 Gem::Specification.new do |spec|
-  spec.name          = "omniauth-xeno"
-  spec.version       = Omniauth::Xeno::VERSION
+  spec.name          = "omniauth-sellsy"
+  spec.version       = Omniauth::Sellsy::VERSION
   spec.authors       = ["Rémi Delhaye"]
   spec.email         = ["remi@xenoapp.com"]
 
-  spec.summary       = %q{OmniAuth strategy for Xeno.}
-  spec.description   = %q{OmniAuth strategy for Xeno.}
-  spec.homepage      = "https://github.com/xenoapp/omniauth-xeno"
+  spec.summary       = %q{OmniAuth strategy for Sellsy.}
+  spec.description   = %q{OmniAuth strategy for Sellsy.}
+  spec.homepage      = "https://github.com/xenoapp/omniauth-sellsy"
   spec.license       = "MIT"
 
   spec.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
