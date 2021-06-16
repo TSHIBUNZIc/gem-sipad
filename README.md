@@ -1,36 +1,23 @@
 # omniauth-sellsy
 
-This is the OmniAuth strategy for authenticating to [Sellsy](https://sellsy.com) (Using OAuth1)
+This is the OmniAuth strategy for authenticating to [Sipad]
 
 ## Installation
 
-1. Create a Sellsy account on https://sellsy.com
-
-2. To get access to the API and has to start develop your application, you must go into your account preferences Sellsy. You will find a category 'Developers'.
-
-3. On this page you can manage your applications: creation, modification, and management of tokens access level (public / private).
-
-4. You just have to create a new application. You will get your tokens and can start your development.
-
-5. Add `omniauth-sellsy` to your Gemfile
+Add `omniauth-sipad` to your Gemfile
 
    ```
-   gem 'omniauth-sellsy'
+   gem 'omniauth-sipad'
    ```
 
 6. Provide your Client ID and Client Secret to your gem in an initializer
 
    ```ruby
-   # In config/initializers/omniauth.rb
 
    use OmniAuth::Builder do
-     provider :sellsy, ENV['consumer_token'], ENV['consumer_secret']
+     provider :sipad, ENV['consumer_token'], ENV['consumer_secret']
    end
    ```
-
-## Credits
-
-This gem was authored by [Rémi Delhaye](https://xenoapp.com/).
 
 ## License
 
