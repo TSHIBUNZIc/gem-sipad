@@ -1,4 +1,4 @@
-# omniauth-sellsy
+# omniauth-sipad
 
 This is the OmniAuth strategy for authenticating to [Sipad]
 
