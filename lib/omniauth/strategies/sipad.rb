@@ -9,7 +9,7 @@ module OmniAuth
       # definir nos arguments
 
       option :client_options, {
-        site: ENV['url_provider'],
+        site: ENV['URL_PROVIDER'],
         raw_info_url: '/my/profile.json', #
         # request_token_path: '/0/request_token',
         # access_token_path: '/0/access_token',
